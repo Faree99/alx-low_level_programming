@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - print all single digi in base 10
- * Return: Always o
+ * main - print all single digit in base 10
+ * Return: Always 0
  */
 int main(void)
 {
 	int c;
 
-	for (c = 0; c < 10; c++)
-		putchar((c % 10) + '0');
-
-	putchar("\n");
-
+	c = 0;
+	while
+		(c < 10) {
+			putchar('c');
+			c++;
+		}
+	putchar('\n');
 	return (0);
 }
