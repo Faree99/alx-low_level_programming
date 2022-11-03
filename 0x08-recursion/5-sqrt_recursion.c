@@ -3,7 +3,7 @@
 /**
  * _sqrt_recursion - evaluate squrt
  * @n: integer
- * Return: evaluate squrt
+ * Return: sqrt_recursion
  */
 int _sqrt_recursion(int n)
 {
