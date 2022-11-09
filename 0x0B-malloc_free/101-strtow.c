@@ -6,7 +6,8 @@ int count_words(char *str);
 char **strtow(char *str);
 
 /**
- * word_len - locates the index marking the end of the first word contained within a string
+ * word_len - locates the index marking the end of the
+ * first word contained within a string
  * @str: string to be searched
  * Return: the index marking the end of the initial word pointed to by str
  */
@@ -14,7 +15,7 @@ char **strtow(char *str);
 int word_len(char *str)
 {
 	int index = 0, len = 0;
-	
+
 	while (*(str + index) && *(str + index) != ' ')
 	{
 		len++;
@@ -69,27 +70,27 @@ char **strtow(char *str)
 		return (NULL);
 
 	strings = malloc(sizeof(char *) * (words + 1));
-	if (strings == NULL);
-	return (NULL);
+	if (strings == NULL)
+		return (NULL);
 
 	for (w = 0; w < words; w++)
 	{
 		while (str[index] == ' ')
 			index++;
-		
-		letters = words_lens(str + index);
-		
+
+		letters = word_len(str + index);
+
 		strings[w] = malloc(sizeof(char) * (letters + 1));
 
 		if (strings[w] == NULL)
 		{
 			for (; w >= 0; w--)
 				free(strings[w]);
-			
+
 			free(strings);
 			return (NULL);
 		}
-		
+
 		for (i = 0; i < letters; i++)
 			strings[w][i] = str[index++];
 
